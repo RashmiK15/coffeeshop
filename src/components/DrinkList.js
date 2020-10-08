@@ -5,14 +5,12 @@ function DrinkList(props){
     return(
       <>
       <div className="container">
-        <DrinksForm onDrinkCreate= {(data) => props.toAddNewDrink(data)}/>
-  
-        <section className="ordersContainer">
-  
-          {props.list.map(Order => <DisplayDrinks Order={Order} key={Order.id}/>)} 
-  
-        </section>
-      
+            <DrinksForm onDrinkCreate= {(data) => props.toAddNewDrink(data)}/>
+    
+            <section className="ordersContainer">
+                {props.list.map(Order => <DisplayDrinks Order={Order} key={Order.id}/>)} 
+            </section>
+        
       </div>
       </>
     )
@@ -23,11 +21,11 @@ function DrinkList(props){
     return(
       <>
         <div className="order"> 
-             <p>Order{props.Order.id}: {props.Order.name}, {props.Order.drink}
-             , with {props.Order.flavour} flavour
-             , {props.Order.size}
-             , {props.Order.milk} milk
-             , {props.Order.isHot}</p>
+            <p>
+             Order{props.Order.id}: {props.Order.name}, {props.Order.drink}
+             , with {props.Order.flavour} flavour, {props.Order.size}, {props.Order.milk} milk
+             , {props.Order.isHot}
+            </p>
         </div>
       </>
     )
@@ -38,8 +36,6 @@ function DrinkList(props){
     constructor(props){
       super(props);
       this.state={
-        // newDrinkName:'',
-        // newDrinkType:'',
         newName:'', 
         newDrinkSize:'',
         newDrinkMilk:'',
@@ -61,10 +57,7 @@ function DrinkList(props){
       let drink = event.target.drinkType.value
       let flavour = event.target.Flavour.value
   
-  
       this.setState((state, props) => ({
-        // newDrinkName : name,
-        // newDrinkType : type
         newName        : name, 
         newDrinkSize   : size,
         newDrinkMilk   : milk,
@@ -79,15 +72,12 @@ function DrinkList(props){
   
     }
   
-  
     render(){
       return(
         <>
-          <div className="formContainer">
+        <div className="formContainer">
             <h3>Place a new order</h3>
-            <form onSubmit={this.handleSubmit}>
-                {/* <label >Place a new order:</label><br /> */}
-  
+            <form onSubmit={this.handleSubmit}>  
                 <label >Your Name:</label><br />
                 <input type="text" required name="drinkName" placeholder="Name"/><br />
                 
@@ -136,14 +126,9 @@ function DrinkList(props){
   
   
                 <button className='button' type="submit">Order </button>
-  
-  
-         </form>
-      </div>
-  
-  
+            </form>
+        </div>
         </>
     )}
   }
 export default DrinkList;
-  

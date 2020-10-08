@@ -24,9 +24,6 @@ class App extends React.Component{
         },
     
       ]
-
-
-      
     }
     this.addNewDrink = this.addNewDrink.bind(this);
   }
@@ -59,17 +56,5 @@ class App extends React.Component{
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default App;
