@@ -155,6 +155,8 @@ class DrinksForm extends React.Component{
                 <option value="Honey Bear Latte">Honey Bear Latte</option>
                 <option value="Ice-Blended ">Ice-Blended </option>
                 <option value="Frappe ">Frappe</option>
+                <option value="Caramel Macchiato ">Caramel Macchiato</option>
+
 
               </select><br />
 
