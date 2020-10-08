@@ -12,8 +12,8 @@ class App extends React.Component{
           size: 'Medium',
           milk:'Regular',
           isHot: 'Hot',
-          drink:'Honey Bear Latte',
-          flavour:'no'
+          drink:'Irish Cappuccino',
+          flavour:'caramel'
 
         },
     
@@ -150,11 +150,11 @@ class DrinksForm extends React.Component{
               <label>Drink</label><br />
               <select name="drinkType">
                 <option value="black Coffee">Black Coffee</option>
-                <option value="latte">Latte</option>
+                <option value="Latte">Latte</option>
                 <option value="Irish Cappuccino">Irish Cappuccino</option>
                 <option value="Honey Bear Latte">Honey Bear Latte</option>
-                <option value="Caramel Ice-Blended ">Ice-Blended </option>
-                <option value="Caramel Ice-Blended ">frappe</option>
+                <option value="Ice-Blended ">Ice-Blended </option>
+                <option value="Frappe ">Frappe</option>
 
               </select><br />
 
